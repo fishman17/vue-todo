@@ -5,8 +5,7 @@
           <div class="todo-content">
           </div>
           <todo-report></todo-report>
-          <todo-list>
-          </todo-list>
+          <todo-list  :collection="listState.items"> </todo-list>
       </div>
   </div>
 </template>
@@ -14,8 +13,13 @@
 import Header from './components/TodoHeader.vue';
 import TodoReport from './components/TodoReport.vue';
 import TodoList from './components/TodoList.vue';
-
+import ListStore from '../data/store.js';
 export default {
+    data(){
+        return{
+            listState: ListStore.state
+        }
+    },
     components: {
     "todo-header": Header,
     "todo-report": TodoReport,
@@ -24,7 +28,7 @@ export default {
 }
 </script>
 <style lang = "stylus">
-    
+    @import "../styl/style.styl";
 </style>
 
 

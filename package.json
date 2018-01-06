@@ -23,5 +23,9 @@
     "vue-loader": "^13.6.2",
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1"
   }
 }
